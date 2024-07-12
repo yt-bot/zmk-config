@@ -5,23 +5,23 @@
 #define X_LT  \
                 &kp F1    &kp F2 &kp F3 &kp F4 &kp F5                 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 \
                 &kp EQUAL &kp N1 &kp N2 &kp N3 &kp N4 &kp N5   &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp MINUS \
-                &kp TAB
+                &kp ESC
 #define X_RT    &kp BACKSLASH
 
-#define X_LM    &kp ESC
+#define X_LM    &kp TAB
 #define X_RM    &none
 
-#define X_LB    &none
-#define X_MB    &none &none &none       &none &none &none
-#define X_RB    &none
+#define X_LB    &mo LIN_UC
+#define X_MB    &smart_shft &to 0 &to 1       &to 3 &to 2 &smart_shft
+#define X_RB    &mo LIN_UC
 
-#define X_LH    &none &none &none &kp LEFT &kp RIGHT
-#define X_MH    &none &none
-#define X_RH    &kp UP &kp DOWN &none &none &none
+#define X_LH    &bootloader &none &none &kp LEFT &kp RIGHT
+//#define X_MH    &lt 8 A &lt NAV B
+#define X_RH    &kp UP &kp DOWN &none &none &bootloader
+
 
 /* activate bluetooth */
 #define CONFIG_WIRELESS 1
 
 /* source the main keymap */
 #include "base.keymap"
-
