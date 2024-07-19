@@ -15,7 +15,7 @@
 #define X_MB    &none &none &none       &none &none &none
 #define X_RB    &none
 
-#define X_LH    &lt 9 &none &none &kp LEFT &kp RIGHT
+#define X_LH    &mo 9 &none &none &kp LEFT &kp RIGHT
 //#define X_MH    &lt 8 A &lt NAV B
 #define X_RH    &kp UP &kp DOWN &none &none &none
 

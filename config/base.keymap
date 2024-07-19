@@ -297,7 +297,7 @@ ZMK_LAYER(sv,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &mt SV_QMARK G  X_MM     &mt EXCL H    &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI P     X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &mt W Z      &mt SV_UNDER X &kp C         &kp V         &kp B           X_MB     &mt N         &mt SV_DQT M  &mt SV_SEMI SV_COMMA &mt SV_COLON SV_DOT &mt SV_BSLH SV_FSLH  X_RB
+    X_LB     &mt W Z      &mt SV_UNDER X &kp C         &kp V         &kp B           X_MB     &kp N         &mt SV_DQT M  &mt SV_SEMI SV_COMMA &mt SV_COLON SV_DOT &mt SV_BSLH SV_FSLH  X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
     X_LH                                  NAV_BSPC     &smart_shft   &tdl_nav_del    X_MH     SMART_NUM     &lt FN RET   &lt_spc NAV 0                               X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
