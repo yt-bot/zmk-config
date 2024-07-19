@@ -84,7 +84,6 @@ MAKE_HRM(sv_hmr_rpar_gt, &kp, &sv_rpar_gt, KEYS_L THUMBS)    // "    "   "   "
     tapping-term-ms = <300>; \
     quick-tap-ms = <220>; \
     hold-trigger-key-positions = <0>; \
-    global-quick-tap-ms = <75>;
 
 &mt { MT_CORE };
 ZMK_HOLD_TAP(mt_home, bindings = <&masked_home>, <&kp>; MT_CORE)
@@ -293,7 +292,7 @@ ZMK_LAYER(base,
 
 ZMK_LAYER(sv,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT    &mt SV_O_UMLAUT Q &mt SV_MINUS SV_A_UMLAUT &mt SV_LBRC E &mt SV_LPAR R  &mt SV_LT T   X_MT     &mt SV_GT Y    &mt SV_RPAR U &mt SV_RBRC I &mt SV_PLUS O   &mt SV_RBKT SQT      X_RT
+    X_LT    &mt Q SV_O_UMLAUT &mt SV_MINUS SV_A_UMLAUT &mt SV_LBRC E &mt SV_LPAR R  &mt SV_LT T   X_MT     &mt SV_GT Y    &mt SV_RPAR U &mt SV_RBRC I &mt SV_PLUS O   &mt SV_RBKT SQT      X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &mt SV_QMARK G  X_MM     &mt EXCL H    &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI P     X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
