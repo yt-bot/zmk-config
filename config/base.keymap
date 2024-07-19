@@ -280,11 +280,11 @@ ZMK_UNICODE_SINGLE(mac_euro_sign, N2, N0, A, C)  // €
 
 ZMK_LAYER(base,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp Q         &mt MINUS W   &kp E         &kp R         &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O         &kp SQT         X_RT
+    X_LT     &mt LBKT Q    &mt MINUS W   &mt LBRC E    &mt LPAR R     &mt LT T       X_MT     &mt GT Y      &mt RPAR U    &mt RBRC I     &mt PLUS O   &mt RBKT SQT    X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &mt QMARK G     X_MM     &mt EXCL H    &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI P     X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp Z         &mt UNDER X   &kp C         &kp V         &kp B           X_MB     &kp N         &mt DOUBLE_QUOTES M  &mt SEMI COMMA &mt COLON DOT &mt BSLH FSLH  X_RB
+    X_LB     &mt STAR Z    &mt UNDER X     &mt AT C   &mt EQUAL V   &mt PIPE B         X_MB   &mt AMPS N    &mt DQT M    &mt SEMI COMMA &mt COLON DOT &mt BSLH FSLH  X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
     X_LH                                  NAV_BSPC     &smart_shft   &tdl_nav_del    X_MH     SMART_NUM     &lt FN RET   &lt_spc NAV 0                                X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
@@ -292,11 +292,11 @@ ZMK_LAYER(base,
 
 ZMK_LAYER(sv,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &mt SV_O_UMLAUT Q &mt SV_MINUS SV_A_UMLAUT &mt LPAR E   &kp R  &kp T    X_MT     &kp Y         &mt RPAR U         &kp I         &kp O         &kp SV_SQT      X_RT
+    X_LT    &mt SV_O_UMLAUT Q &mt SV_MINUS SV_A_UMLAUT &mt SV_LBRC E &mt SV_LPAR R  &mt SV_LT T   X_MT     &mt SV_GT Y    &mt SV_RPAR U &mt SV_RBRC I &mt SV_PLUS O   &mt SV_RBKT SQT      X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &mt SV_QMARK G  X_MM     &mt EXCL H    &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI P     X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &mt W Z      &mt SV_UNDER X  &mt SV_STAR C &mt SV_PLUS V &mt SV_AT B    X_MB     &mt SV_AMPS N &mt SV_DQT M   &mt SV_SEMI SV_COMMA &mt SV_COLON SV_DOT &mt SV_BSLH SV_FSLH  X_RB
+    X_LB     &mt W Z      &mt SV_UNDER X &mt SV_AT C &mt SV_EQUAL V &mt SV_PIPE B   X_MB     &mt SV_AMPS N &mt SV_DQT M   &mt SV_SEMI SV_COMMA &mt SV_COLON SV_DOT &mt SV_BSLH SV_FSLH  X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
     X_LH                                  NAV_BSPC     &smart_shft   &tdl_nav_del    X_MH     SMART_NUM     &lt FN RET   &lt_spc NAV 0                               X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
