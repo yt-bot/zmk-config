@@ -83,7 +83,7 @@ MAKE_HRM(sv_hmr_rpar_gt, &kp, &sv_rpar_gt, KEYS_L THUMBS)    // "    "   "   "
     flavor = "tap-preferred"; \
     tapping-term-ms = <300>; \
     quick-tap-ms = <220>; \
-    hold-trigger-key-positions = <0>;
+    hold-trigger-key-positions = <0>; \
     global-quick-tap-ms = <75>;
 
 &mt { MT_CORE };
