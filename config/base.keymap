@@ -24,10 +24,8 @@
 #define NUM 8
 #define SYS 9
 #define UC 10
-#define MOUSE 11
 
 #include "combos.dtsi"  // requires layer aliases
-#include "mouse.dtsi"
 #include "extra_keys.h"
 
 #define XXX &none
@@ -118,7 +116,7 @@ MASK_MODS(masked_end,  (MOD_LCTL), &kp END)
 MASK_MODS(mac_masked_home, (MOD_LGUI), &kp HOME)
 MASK_MODS(mac_masked_end,  (MOD_LGUI), &kp END)
 
-/* Caps-word, num-word and smart-mouse */
+/* Caps-word and num-word */
 
 // tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
 ZMK_MOD_MORPH(smart_shft,
@@ -145,13 +143,6 @@ ZMK_TAP_DANCE(num_dance,
     layers = <NUM>;
     continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
 };
-
-// smart-mouse, requires PR #1366
-ZMK_TRI_STATE(smart_mouse,
-    bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
-    ignored-key-positions = <LT1 LT3 RT0 RT1 RT2 RT3 RT4 RM1 RM2 RM3 RB1 RB2 RB3 RH0 RH1>;
-    ignored-layers = <MOUSE>;
-)
 
 /* Custom behaviors */
 
@@ -253,12 +244,12 @@ ZMK_MACRO(win_sleep,
 )
 
 // misc aliases
-#define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
-#define DSK_PREV    &hmr LCTRL LG(LC(LEFT))   // previous desktop
-#define DSK_NEXT    &hmr LALT LG(LC(RIGHT)) // next     desktop
-#define PIN_WIN     &kp LG(LC(LS(Q)))        // pin window across desktops
-#define PIN_APP     &kp LG(LC(LS(A)))        // pin application across desktops
-#define DSK_MGR     &kp LA(GRAVE)            // desktop manager
+#define CANCEL      &kp K_CANCEL                // cancel caps-word and num-word
+#define DSK_PREV    &hmr LCTRL LG(LC(LEFT))     // previous desktop
+#define DSK_NEXT    &hmr LALT LG(LC(RIGHT))     // next     desktop
+#define PIN_WIN     &kp LG(LC(LS(Q)))           // pin window across desktops
+#define PIN_APP     &kp LG(LC(LS(A)))           // pin application across desktops
+#define DSK_MGR     &kp LA(GRAVE)               // desktop manager
 #define VOL_DOWN    &hmr RSHFT C_VOL_DN
 
 #define LIN_LOCK  &kp LG(L)
@@ -267,7 +258,7 @@ ZMK_MACRO(win_sleep,
 
 /* Keymap */
 
-ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
+ZMK_CONDITIONAL_LAYER(FN NAV, SYS)  // FN + NAV --> SYS
 
 // Linux unicodes
 ZMK_UNICODE_PAIR(lin_sv_ae,   N0, N0,  E, N4,   N0, N0,  C, N4)
@@ -301,11 +292,11 @@ ZMK_LAYER(base,
 
 ZMK_LAYER(sv,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &mt SV_O_UMLAUT Q &mt SV_MINUS SV_A_UMLAUT &kp E   &kp R  &kp T         X_MT     &kp Y         &kp U         &kp I         &kp O         &kp SV_SQT      X_RT
+    X_LT     &mt SV_O_UMLAUT Q &mt SV_MINUS SV_A_UMLAUT &mt LPAR E   &kp R  &kp T    X_MT     &kp Y         &mt RPAR U         &kp I         &kp O         &kp SV_SQT      X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &mt SV_QMARK G  X_MM     &mt EXCL H    &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI P     X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &mt W Z         &mt SV_UNDER X  &kp C       &kp V         &kp B         X_MB     &kp N         &mt SV_DQT M   &mt SV_SEMI SV_COMMA &mt SV_COLON SV_DOT &mt SV_BSLH SV_FSLH  X_RB
+    X_LB     &mt W Z      &mt SV_UNDER X  &mt SV_STAR C &mt SV_PLUS V &mt SV_AT B    X_MB     &mt SV_AMPS N &mt SV_DQT M   &mt SV_SEMI SV_COMMA &mt SV_COLON SV_DOT &mt SV_BSLH SV_FSLH  X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
     X_LH                                  NAV_BSPC     &smart_shft   &tdl_nav_del    X_MH     SMART_NUM     &lt FN RET   &lt_spc NAV 0                               X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
@@ -418,17 +409,3 @@ ZMK_LAYER(uc_both,
     X_LH   /* Z key added for debugging purposes */    &kp Z         ___             X_MH     ___           ___                                                       X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
-
-ZMK_LAYER(mouse,
-//╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     ___           ___           ___           ___           ___             X_MT     U_WH_L        U_WH_D        U_MS_U         U_WH_U       U_WH_R          X_RT
-//├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     ___           ___           ___           ___           ___             X_MM     ___           U_MS_L        U_MS_D         U_MS_R       ___             X_RM
-//├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     ___           ___           ___           ___           ___             X_MB     ___           &mkp MB4      &mkp MCLK      &mkp MB5     ___             X_RB
-//├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-    X_LH                                               ___           ___             X_MH     &mkp LCLK     &mkp RCLK                                                 X_RH
-//╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
-)
-
-/* vim: set ft=c tw=174: */
