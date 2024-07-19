@@ -84,6 +84,7 @@ MAKE_HRM(sv_hmr_rpar_gt, &kp, &sv_rpar_gt, KEYS_L THUMBS)    // "    "   "   "
     tapping-term-ms = <300>; \
     quick-tap-ms = <220>; \
     hold-trigger-key-positions = <0>;
+    global-quick-tap-ms = <75>;
 
 &mt { MT_CORE };
 ZMK_HOLD_TAP(mt_home, bindings = <&masked_home>, <&kp>; MT_CORE)
