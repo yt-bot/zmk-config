@@ -23,9 +23,10 @@
 #define HRC_REPEAT_MAC  &hml_repeat           LS(LGUI)  0
 #define HRC_LPAR_MAC    &hmr_lpar_lt          RS(LGUI)  0
 
-// UC combos
+// Layer combos
 ZMK_COMBO(grk,          &sl UC,                     RT1 RT3,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(cpgrk,        &sls 0,                     RT1 RT2 RT3,  DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(ssym,         &sl SYM,                    LM1 RM1,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Horizontal combos - left hand */
 ZMK_COMBO(esc,        &kp ESC,                      LT3 LT2,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
