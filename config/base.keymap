@@ -290,7 +290,6 @@ ZMK_TAP_DANCE(tdl_nav_del_mac,
 )
 
 ZMK_TAP_DANCE(td,
-    flavor = "tap-preferred";
     tapping-term-ms = <200>;
     quick-tap-ms = <250>;
     bindings = <&kp>, <&kp>;
