@@ -270,6 +270,17 @@ ZMK_TAP_DANCE(tdl_nav_del,
     bindings = <&lt NAV_LH DEL>, <&to NAV_LH>;
 )
 
+// Tap-dance and layer tap: one tap outputs a key press, two taps switches to layer, tap and hold enables the layer temporarily.
+ZMK_TAP_DANCE(tdl_sym_b,
+    tapping-term-ms = <200>;
+    bindings = <&lt SYM G>, <&to SYM>;
+)
+
+ZMK_TAP_DANCE(tdl_sym_h,
+    tapping-term-ms = <200>;
+    bindings = <&lt SYM H>, <&to SYM>;
+)
+
 ZMK_TAP_DANCE(tdl_nav_del_mac,
     tapping-term-ms = <200>;
     bindings = <&lt NAV_MAC DEL>, <&to NAV_MAC>;
@@ -297,7 +308,7 @@ ZMK_MACRO(win_sleep,
 
 /* Keymap */
 
-/ { 
+/*/ { 
     behaviors {
         hl_l: homerow_layers_left {
             compatible = "zmk,behavior-hold-tap";
@@ -318,7 +329,15 @@ ZMK_MACRO(win_sleep,
             bindings = <&mo>, <&kp>;
         };
     };
-};
+}; */
+
+// tap: key | hold: activate layer
+ZMK_HOLD_TAP(lt_layer_key,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&mo>, <&kp>;
+)
 
 
 // Linux unicodes
@@ -345,7 +364,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G           X_MM     &kp H         &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI P     X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp Z         &kp X         &kp C         &&hl_l SYM V  &kp B           X_MB     &kp N         &&hl_r SYM M  &kp COMMA     &kp DOT       &mt BSLH FSLH   X_RB
+    X_LB     &kp Z         &kp X         &kp C      &lt_layer_key SYM V  &kp B       X_MB     &kp N     &lt_layer_key SYM M  &kp COMMA  &kp DOT       &mt BSLH FSLH   X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
     X_LH                                  NAV_BSPC     &smart_shft   &tdl_nav_del    X_MH     SMART_NUM     &lt FN RET   &lt_spc NAV 0                                X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
