@@ -8,9 +8,8 @@ Notable changes:
 
 - QWERTY layout
 - has separate layers for english and swedish layouts, for linux and macos.
-  - swedish needs sv keyboard set in the os, en needs us english.
-- has combos for both localizations
-- has mod taps for ?!-_;:\ keys in typing layers
+  - the keyboard layout should be set to en-us on the host computer
+- has mod taps for ?!"-_;:\ keys in typing layers
 
 TODO:
 
