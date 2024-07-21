@@ -231,9 +231,23 @@ ZMK_MACRO(uc_shift,
 SIMPLE_MORPH(lpar_lt, SFT, &kp LPAR, &kp LT)
 SIMPLE_MORPH(rpar_gt, SFT, &kp RPAR, &kp GT)
 
+// tap: key | hold: activate layer
+ZMK_HOLD_TAP(lt_layer_key,
+    flavor = "tap-preferred";
+    tapping-term-ms = <220>;
+    quick-tap-ms = <250>;
+    bindings = <&mo>, <&kp>;
+)
+
+// Tap-dance and layer tap: one tap outputs a key press, two taps switches to layer, tap and hold enables the layer temporarily.
+ZMK_TAP_DANCE(tdl_sym_v,
+    tapping-term-ms = <200>;
+    bindings = <&lt SYM V>, <&to SYM>;
+)
+
 // tap: space | shift + tap: dot -> space -> sticky shift | hold: activate layer
 ZMK_HOLD_TAP(lt_spc,
-    flavor = "balanced";
+    flavor = "tap-preferred";
     tapping-term-ms = <200>;
     quick-tap-ms = <QUICK_TAP_MS>;
     bindings = <&mo>, <&spc_morph>;
@@ -270,17 +284,6 @@ ZMK_TAP_DANCE(tdl_nav_del,
     bindings = <&lt NAV_LH DEL>, <&to NAV_LH>;
 )
 
-// Tap-dance and layer tap: one tap outputs a key press, two taps switches to layer, tap and hold enables the layer temporarily.
-ZMK_TAP_DANCE(tdl_sym_b,
-    tapping-term-ms = <200>;
-    bindings = <&lt SYM G>, <&to SYM>;
-)
-
-ZMK_TAP_DANCE(tdl_sym_h,
-    tapping-term-ms = <200>;
-    bindings = <&lt SYM H>, <&to SYM>;
-)
-
 ZMK_TAP_DANCE(tdl_nav_del_mac,
     tapping-term-ms = <200>;
     bindings = <&lt NAV_MAC DEL>, <&to NAV_MAC>;
@@ -305,40 +308,7 @@ ZMK_MACRO(win_sleep,
 #define LIN_LOCK  &kp LG(L)
 #define MAC_LOCK  &kp LC(LG(Q))
 
-
 /* Keymap */
-
-/*/ { 
-    behaviors {
-        hl_l: homerow_layers_left {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_LAYERS_L";
-            #binding-cells = <2>;
-            tapping-term-ms = <220>;
-            quick-tap-ms = <250>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&kp>;
-        };
-        hl_r: homerow_layers_right {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_LAYERS_R";
-            #binding-cells = <2>;
-            tapping-term-ms = <220>;
-            quick-tap-ms = <250>;
-            flavor = "tap-preferred";
-            bindings = <&mo>, <&kp>;
-        };
-    };
-}; */
-
-// tap: key | hold: activate layer
-ZMK_HOLD_TAP(lt_layer_key,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-    bindings = <&mo>, <&kp>;
-)
-
 
 // Linux unicodes
 ZMK_UNICODE_PAIR(lin_sv_ae,   N0, N0,  E, N4,   N0, N0,  C, N4)
@@ -364,7 +334,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G           X_MM     &kp H         &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI P     X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp Z         &kp X         &kp C      &lt_layer_key SYM V  &kp B       X_MB     &kp N     &lt_layer_key SYM M  &kp COMMA  &kp DOT       &mt BSLH FSLH   X_RB
+    X_LB     &kp Z         &kp X         &kp C         &tdl_sym_v    &kp B           X_MB     &kp N     &lt_layer_key SYM M  &kp COMMA  &kp DOT       &mt BSLH FSLH   X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
     X_LH                                  NAV_BSPC     &smart_shft   &tdl_nav_del    X_MH     SMART_NUM     &lt FN RET   &lt_spc NAV 0                                X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
@@ -376,7 +346,7 @@ ZMK_LAYER(sv,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G           X_MM     &kp H         &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI P     X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &mt W Z       &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT       &mt BSLH FSLH   X_RB
+    X_LB     &mt W Z       &kp X         &kp C         &tdl_sym_v    &kp B           X_MB     &kp N     &lt_layer_key SYM M  &kp COMMA  &kp DOT       &mt BSLH FSLH   X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
     X_LH                                  NAV_BSPC     &smart_shft   &tdl_nav_del    X_MH     SMART_NUM     &lt FN RET   &lt_spc NAV 0                                X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
@@ -386,9 +356,9 @@ ZMK_LAYER(en_mac,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     &kp Q         &kp W         &kp E         &kp R         &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O         &kp SQT         X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &mt QMARK G     X_MM     &mt EXCL H    &hmr RCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr RGUI P     X_RM
+    X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G           X_MM     &kp H         &hmr RCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr RGUI P     X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &mt DQT M   &mt SEMI COMMA  &mt COLON DOT &mt BSLH FSLH   X_RB
+    X_LB     &kp Z         &kp X         &kp C         &tdl_sym_v    &kp B           X_MB     &kp N     &lt_layer_key SYM M  &kp COMMA  &kp DOT       &mt BSLH FSLH   X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
     X_LH                                 NAV_BSPC_MAC  &smart_shft &tdl_nav_del_mac  X_MH     SMART_NUM     &lt FN RET    &lt_spc NAV 0                               X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
@@ -398,9 +368,9 @@ ZMK_LAYER(sv_mac,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     &mt Q &mac_sv_oe &mac_sv_ae &kp E         &kp R         &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O         &kp SQT         X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &mt QMARK G     X_MM     &mt EXCL H    &hmr RCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr RGUI P     X_RM
+    X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G           X_MM     &kp H         &hmr RCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr RGUI P     X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &mt W Z       &mt UNDER X   &kp C         &kp V         &kp B           X_MB     &kp N         &mt DQT M    &mt SEMI COMMA &mt COLON DOT &mt BSLH FSLH   X_RB
+    X_LB     &mt W Z       &kp X         &kp C         &tdl_sym_v    &kp B           X_MB     &kp N     &lt_layer_key SYM M  &kp COMMA  &kp DOT       &mt BSLH FSLH   X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
     X_LH                                 NAV_BSPC_MAC  &smart_shft &tdl_nav_del_mac  X_MH     SMART_NUM     &lt FN RET    &lt_spc NAV 0                               X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
@@ -474,7 +444,7 @@ ZMK_LAYER(sym,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp FSLH      &kp STAR      &kp TILDE     &kp GRAVE     &kp PIPE        X_MB     &kp AMPS      &kp COLON    &kp SEMICOLON  &kp PRCNT     &kp CARET       X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯ ├──────┤
-    X_LH                                               &lin_euro_sign ___            X_MH     ___           &mac_euro_sign                                            X_RH
+    X_LH                                               &to DEF       &lin_euro_sign  X_MH    &mac_euro_sign  &to EN_MAC                                               X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
