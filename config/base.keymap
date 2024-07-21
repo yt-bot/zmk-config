@@ -289,6 +289,13 @@ ZMK_TAP_DANCE(tdl_nav_del_mac,
     bindings = <&lt NAV_MAC DEL>, <&to NAV_MAC>;
 )
 
+ZMK_TAP_DANCE(td,
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <250>;
+    bindings = <&kp>, <&kp>;
+)
+
 // Windows sleep key
 ZMK_MACRO(win_sleep,
     wait-ms = <500>;
@@ -438,9 +445,9 @@ ZMK_LAYER(num,
 
 ZMK_LAYER(sym,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp BSLH      &kp UNDER     &kp LBKT      &kp LBRC      &kp LT          X_MT     &kp GT        &kp RBRC      &kp RBKT      &kp HASH      &kp DLLR        X_RT
+    X_LT     &kp BSLH      &kp UNDER     &kp LBKT      &td LBRC LBKT &td LT GT       X_MT     &kp GT        &td RBRC RBKT &kp RBKT      &kp HASH      &kp DLLR        X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &kp MINUS     &kp PLUS      &kp EQUAL     &kp LPAR      &kp QMARK       X_MM     &kp EXCL      &kp RPAR      &kp DQT       &kp SQT       &kp AT          X_RM
+    X_LM     &td MINUS UNDER &kp PLUS    &kp EQUAL     &kp LPAR      &td QMARK EXCL  X_MM     &kp EXCL      &kp RPAR      &kp DQT       &kp SQT       &kp AT          X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp FSLH      &kp STAR      &kp TILDE     &kp GRAVE     &kp PIPE        X_MB     &kp AMPS      &kp COLON    &kp SEMICOLON  &kp PRCNT     &kp CARET       X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯ ├──────┤

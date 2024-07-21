@@ -1,15 +1,13 @@
-# A heavily modified and currently untested fork of urob's zmk config
+# QWERTY fork of urob's zmk config
 
-Using this config isn't advisable.
-
-The keymap image does not reflect the current keymap. Some of the combos do not work, and the typing layers have additional mod taps which likely break more combos.
+This config is work in progress. The keymap image does not reflect the current keymap.
 
 Notable changes:
 
 - QWERTY layout
-- has separate layers for english and swedish layouts, for linux and macos.
+- has separate layers for english and swedish layouts, for linux and macos
   - the keyboard layout should be set to en-us on the host computer
-- has mod taps for ?!"-_;:\ keys in typing layers
+- has a separate symbol layer in addition to the original combos
 
 TODO:
 
