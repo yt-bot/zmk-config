@@ -22,8 +22,9 @@
 #define NAV_MAC 6
 #define FN 7
 #define NUM 8
-#define SYS 9
-#define UC 10
+#define SYM 9
+#define SYS 10
+#define UC 11
 
 #include "combos.dtsi"  // requires layer aliases
 #include "extra_keys.h"
@@ -32,6 +33,50 @@
 #define ___ &trans
 
 /* Global settings */
+
+// Override en-us specific locales.
+#undef  AMPS
+#define AMPS  LS(N7)
+#undef  AT
+#define AT    LS(N2)
+#undef  CARET
+#define CARET LS(N6)
+#undef  COLON
+#define COLON LS(SEMI)
+#undef  DLLR
+#define DLLR  LS(N4)
+#undef  DQT
+#define DQT   LS(SQT)
+#undef  EXCL
+#define EXCL  LS(N1)
+#undef  GT
+#define GT    LS(DOT)
+#undef  HASH
+#define HASH  LS(N3)
+#undef  LBRC
+#define LBRC  LS(LBKT)
+#undef  LPAR
+#define LPAR  LS(N9)
+#undef  LT
+#define LT    LS(COMMA)
+#undef  PIPE
+#define PIPE  LS(BSLH)
+#undef  PLUS
+#define PLUS  LS(EQUAL)
+#undef  PRCNT
+#define PRCNT LS(N5)
+#undef  QMARK
+#define QMARK LS(FSLH)
+#undef  RBRC
+#define RBRC  LS(RBKT)
+#undef  RPAR
+#define RPAR  LS(N0)
+#undef  STAR
+#define STAR  LS(N8)
+#undef  TILDE
+#define TILDE LS(GRAVE)
+#undef  UNDER
+#define UNDER LS(MINUS)
 
 #define QUICK_TAP_MS 175
 
@@ -258,9 +303,6 @@ ZMK_MACRO(win_sleep,
 
 /* Keymap */
 
-// Moved to extra key confs.
-//ZMK_CONDITIONAL_LAYER(FN NAV, SYS)  // FN + NAV --> SYS
-
 // Linux unicodes
 ZMK_UNICODE_PAIR(lin_sv_ae,   N0, N0,  E, N4,   N0, N0,  C, N4)
 ZMK_UNICODE_PAIR(lin_sv_ao,   N0, N0,  E, N5,   N0, N0,  C, N5)
@@ -293,11 +335,11 @@ ZMK_LAYER(base,
 
 ZMK_LAYER(sv,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT    &mt Q SV_O_UMLAUT &mt SV_MINUS SV_A_UMLAUT &kp E &kp  R  &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O         &kp SV_SQT      X_RT
+    X_LT    &mt Q SV_O_UMLAUT &mt MINUS SV_A_UMLAUT &kp E &kp R      &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O         &kp SV_SQT      X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &mt SV_QMARK G  X_MM     &mt EXCL H    &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI P     X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &mt W Z      &mt SV_UNDER X &kp C         &kp V         &kp B           X_MB     &kp N         &mt SV_DQT M  &mt SV_SEMI SV_COMMA &mt SV_COLON SV_DOT &mt SV_BSLH SV_FSLH  X_RB
+    X_LB     &mt W Z      &mt UNDER X &kp C         &kp V         &kp B           X_MB     &kp N         &mt SV_DQT M  &mt SV_SEMI SV_COMMA &mt SV_COLON SV_DOT &mt SV_BSLH SV_FSLH  X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
     X_LH                                  NAV_BSPC     &smart_shft   &tdl_nav_del    X_MH     SMART_NUM     &lt FN RET   &lt_spc NAV 0                               X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
@@ -377,15 +419,28 @@ ZMK_LAYER(fn,
 
 ZMK_LAYER(num,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     ___           &kp N7        &kp N8        &kp N9        ___             X_MT     ___           ___           ___           ___           ___             X_RT
+    X_LT     &kp LS(N1)    &kp LS(N2)    &kp LS(N3)    &kp LS(N4)    &kp LS(N5)      X_MT     &kp LS(N6)    &kp LS(N7)    &kp LS(N8)    &kp LS(N9)    &kp LS(N0)      X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &hml LGUI N0  &hml LALT N4  &hml LSHFT N5 &hml LCTRL N6 ___             X_MM     ___           ___           ___           ___           ___             X_RM
+    X_LM     &hml LGUI N1  &hml LALT N2  &hml LSHFT N3 &hml LCTRL N4 &kp N5          X_MM     &kp N6        &hmr RCTRL N7  &hmr RSHFT N8  &hmr LALT N9 &hmr RGUI N0   X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     ___           &kp N1        &kp N2        &kp N3        ___             X_MB     ___           ___           ___           ___           ___             X_RB
+    X_LB     &kp MINUS     &kp PLUS      &kp FSLH      &kp STAR      &kp EQUAL       X_MB     ___           &kp DOT       &kp COMMA      ___           ___             X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               ___           ___             X_MH     ___           ___                                                       X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
+
+ZMK_LAYER(sym,
+//╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
+    X_LT     &kp HASH      &kp AT        &kp LBKT      &kp LBRC      &kp LT          X_MT     &kp GT        &kp RBRC      &kp RBKT      &kp SQT       &kp DLLR        X_RT
+//├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+    X_LM     &hml LGUI N1  &hml LALT PLUS &hml LSHFT MINUS &hml LCTRL LPAR &kp QMARK  X_MM     &kp EXCL    &hmr RCTRL RPAR &hmr RSHFT EQUAL &hmr LALT DQT &hmr RGUI N0   X_RM
+//├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+    X_LB     &kp MINUS     &kp UNDER      &kp FSLH      &kp STAR      &kp PIPE       X_MB     &kp AMPS       &kp COLON    &kp SEMICOLON ___           ___             X_RB
+//├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
+    X_LH                                               ___           ___             X_MH     ___           ___                                                       X_RH
+//╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
+)
+
 
 ZMK_LAYER(sys,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
@@ -401,7 +456,7 @@ ZMK_LAYER(sys,
 
 ZMK_LAYER(uc_both,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     ___           &lin_sv_ao    &sv_oe        &lin_sv_ae    ___             X_MT     ___           &mac_sv_ae    &mac_sv_oe    &mac_sv_ao    ___             X_RT
+    X_LT     ___           &lin_sv_ao    &lin_sv_oe    &lin_sv_ae    ___             X_MT     ___           &mac_sv_ae    &mac_sv_oe    &mac_sv_ao    ___             X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     ___           ___          &lin_euro_sign ___           ___             X_MM     ___           ___           &mac_euro_sign ___          ___            X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
