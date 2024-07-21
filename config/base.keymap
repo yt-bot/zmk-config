@@ -297,6 +297,30 @@ ZMK_MACRO(win_sleep,
 
 /* Keymap */
 
+/ { 
+    behaviors {
+        hl_l: homerow_layers_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_LAYERS_L";
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <250>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
+        };
+        hl_r: homerow_layers_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_LAYERS_R";
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <250>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&kp>;
+        };
+    };
+};
+
+
 // Linux unicodes
 ZMK_UNICODE_PAIR(lin_sv_ae,   N0, N0,  E, N4,   N0, N0,  C, N4)
 ZMK_UNICODE_PAIR(lin_sv_ao,   N0, N0,  E, N5,   N0, N0,  C, N5)
@@ -321,7 +345,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G           X_MM     &kp H         &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI P     X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT       &mt BSLH FSLH   X_RB
+    X_LB     &kp Z         &kp X         &kp C         &&hm_l SYM V  &kp B           X_MB     &kp N         &&hm_r SYM M  &kp COMMA     &kp DOT       &mt BSLH FSLH   X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
     X_LH                                  NAV_BSPC     &smart_shft   &tdl_nav_del    X_MH     SMART_NUM     &lt FN RET   &lt_spc NAV 0                                X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
