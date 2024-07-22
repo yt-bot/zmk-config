@@ -306,7 +306,7 @@ ZMK_MACRO(end_quote_comma,
 )
 
 ZMK_MACRO(end_quote_dot,
-    bindings = <&kp dot &kp DQT &kp SPACE>;
+    bindings = <&kp DOT &kp DQT &kp SPACE>;
 )
 
 // Windows sleep key
