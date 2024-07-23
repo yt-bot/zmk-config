@@ -502,9 +502,9 @@ ZMK_LAYER(num_mac,
 
 ZMK_LAYER(sym,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp BSLH      &kp UNDER     &kp LBKT  &td_keys LBKT LBRC &td_keys GT LT X_MT     &kp GT    &td_keys RBKT RBRC &kp RBKT     &kp HASH      &kp DLLR        X_RT
+    X_LT     &kp BSLH      &kp UNDER     &kp LBKT      &kp LBRC      &kp LT          X_MT     &kp GT        &kp RBRC      &kp RBKT      &kp HASH      &kp DLLR        X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &td_keys UNDER MINUS &kp PLUS &kp EQUAL  &kp LPAR  &td_keys EXCL QMARK  X_MM     &kp EXCL      &kp RPAR      &kp DQT       &kp SQT       &kp AT          X_RM
+    X_LM     &kp MINUS     &kp PLUS      &kp EQUAL     &kp LPAR      &kp QMARK       X_MM     &kp EXCL      &kp RPAR      &kp DQT       &kp SQT       &kp AT          X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp FSLH      &kp STAR      &kp TILDE     &kp GRAVE     &kp PIPE        X_MB     &kp AMPS      &kp COLON    &kp SEMICOLON  &kp PRCNT     &kp CARET       X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯ ├──────┤
