@@ -40,7 +40,7 @@ ZMK_COMBO(repeat_mac, HRC_REPEAT_MAC,               LM2 LM1,      DEF SV EN_MAC 
 ZMK_COMBO(cut,        &kp LC(X),                    LB3 LB1,      DEF SV NAV NUM NUM_MAC,                               COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(copy,       &kp LC(C),                    LB3 LB2,      DEF SV NAV NUM NUM_MAC,                               COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(cut_mac,    &kp LG(X),                    LB3 LB1,      EN_MAC SV_MAC NAV_MAC,                                COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(copy_mac,   &kp LG(V),                    LB3 LB2,      EN_MAC SV_MAC NAV_MAC,                                COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(copy_mac,   &kp LG(C),                    LB3 LB2,      EN_MAC SV_MAC NAV_MAC,                                COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(paste,      &kp LC(V),                    LB2 LB1,      DEF SV NAV NUM,                                       COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(paste_mac,  &kp LG(V),                    LB2 LB1,      EN_MAC SV_MAC NAV_MAC NUM_MAC,                        COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
@@ -72,9 +72,12 @@ ZMK_COMBO(equal,      &kp EQUAL,                    LM1 LB1,      DEF SV EN_MAC 
 ZMK_COMBO(tilde,      &kp TILDE,                    LM0 LB0,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 /* Vertical combos - right hand */
-ZMK_COMBO(caret,      &kp CARET,                    RT0 RM0,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(AMPS,      &kp AMPS,                    RT0 RM0,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(plus,       &kp PLUS,                     RT1 RM1,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(star,       &kp STAR,                     RT2 RM2,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(amps,       &kp AMPS,                     RT3 RM3,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(caret,       &kp CARET,                     RT3 RM3,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
-ZMK_COMBO(pipe,       &kp PIPE,                     RM3 RB3,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(pipe,      &kp PIPE,                    RM0 RB0,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(minus,      &kp MINUS,                    RM1 RB1,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(fslh,       &kp FSLH,                     RM2 RB2,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(under,       &kp UNDER,                     RM3 RB3,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
