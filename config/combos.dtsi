@@ -43,6 +43,8 @@ ZMK_COMBO(cut_mac,    &kp LG(X),                    LB3 LB1,      EN_MAC SV_MAC 
 ZMK_COMBO(copy_mac,   &kp LG(C),                    LB3 LB2,      EN_MAC SV_MAC NAV_MAC,                                COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(paste,      &kp LC(V),                    LB2 LB1,      DEF SV NAV NUM,                                       COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(paste_mac,  &kp LG(V),                    LB2 LB1,      EN_MAC SV_MAC NAV_MAC NUM_MAC,                        COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(undo,       &kp LC(Z),                    LB1 LB0,      DEF SV NAV NUM,                                       COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(undo_mac,   &kp LG(Z),                    LB1 LB0,      EN_MAC SV_MAC NAV_MAC NUM_MAC,                        COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 
 /* Horizontal combos - right hand */
@@ -61,9 +63,10 @@ ZMK_COMBO(lbrc,       &kp LBRC,                     RB1 RB2,      NAV NAV_MAC,  
 ZMK_COMBO(rbrc,       &kp RBRC,                     RB2 RB3,      NAV NAV_MAC,                                          COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Vertical combos - left hand */
+ZMK_COMBO(dllr,       &kp DLLR,                     LT4 LM4,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(at,         &kp AT,                       LT3 LM3,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(hash,       &kp HASH,                     LT2 LM2,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-ZMK_COMBO(dllr,       &kp DLLR,                     LT1 LM1,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(dqt,        &kp DQT,                      LT2 LM2,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(hash,       &kp HASH,                     LT1 LM1,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(prcnt,      &kp PRCNT,                    LT0 LM0,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
 ZMK_COMBO(grave,      &kp GRAVE,                    LM3 LB3,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
