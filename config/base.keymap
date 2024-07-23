@@ -406,9 +406,9 @@ ZMK_LAYER(en_mac,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     &kp Q         &kp W         &kp E         &kp R         &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O         &kp SQT         X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &hml LCTRL A   &hml LALT S   &hml LSHFT D  &hml LGUI F  &kp G           X_MM     &kp H         &hmr RGUI J  &hmr RSHFT K  &hmr LALT L   &hmr RCTRL P     X_RM
+    X_LM     &hml LCTRL A  &hml LALT S   &hml LSHFT D  &hml LGUI F   &kp G           X_MM     &kp H         &hmr RGUI J  &hmr RSHFT K   &hmr LALT L   &hmr RCTRL P    X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp Z         &kp X         &kp C         &tdl_sym_v    &kp B           X_MB     &kp N     &lt_layer_key SYM M  &kp COMMA  &kp DOT       &mt BSLH FSLH   X_RB
+    X_LB     &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M        &kp COMMA      &kp DOT       &mt BSLH FSLH   X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
     X_LH                                 NAV_BSPC_MAC  &smart_shft &tdl_nav_del_mac  X_MH     SMART_NUM_MAC &lt FN RET    &lt_spc SYM 0                               X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
