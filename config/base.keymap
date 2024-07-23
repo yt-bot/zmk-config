@@ -313,13 +313,13 @@ ZMK_MOD_MORPH(bs_del,
 // tap: copy | double-tap: cut
 ZMK_TAP_DANCE(copy_cut,
     tapping-term-ms = <200>;
-    bindings = <&kp LC(INS)>, <&kp LC(X)>;
+    bindings = <&kp LC(C)>, <&kp LC(X)>;
 )
 
 // tap: copy | double-tap: cut
 ZMK_TAP_DANCE(copy_cut_mac,
     tapping-term-ms = <200>;
-    bindings = <&kp LG(INS)>, <&kp LG(X)>;
+    bindings = <&kp LG(C)>, <&kp LG(X)>;
 )
 
 // Tap-dance and layer tap: one tap outputs a key press, two taps switches to layer, tap and hold enables the layer temporarily.
@@ -390,19 +390,19 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT       &mt BSLH FSLH   X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
-    X_LH                                  NAV_BSPC     &smart_shft   &tdl_nav_del    X_MH     SMART_NUM     &lt FN RET    &lt_spc SYM 0                               X_RH
+    X_LH                                  &lt_spc NAV 0 SMART_NUM   ___             X_MH     ___           &lt FN RET     &smart_shft                                 X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
 )
 
 ZMK_LAYER(sv,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp Q         &lin_sv_ae     &kp E         &kp R         &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O        &lin_sv_oe      X_RT
+    X_LT     &kp Q         &lin_sv_ae     &kp E         &kp R        &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O         &lin_sv_oe      X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G           X_MM     &kp H         &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI P     X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &mt W Z       &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT       &mt BSLH FSLH   X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
-    X_LH                                  NAV_BSPC     &smart_shft   &tdl_nav_del    X_MH     SMART_NUM     &lt FN RET   &lt_spc SYM 0                                X_RH
+    X_LH                                  &lt_spc NAV 0 NAV_BSPC     ___             X_MH     ___           &lt FN RET    &smart_shft                                 X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
 )
 
