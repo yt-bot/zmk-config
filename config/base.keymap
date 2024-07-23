@@ -325,7 +325,7 @@ ZMK_TAP_DANCE(copy_cut_mac,
 // Tap-dance and layer tap: one tap outputs a key press, two taps switches to layer, tap and hold enables the layer temporarily.
 ZMK_TAP_DANCE(tdl_sym_bspc,
     tapping-term-ms = <200>;
-    bindings = <&lt SYM NAV_BSPC>, <&to SYM>;
+    bindings = <&lt SYM BACKSPACE>, <&to SYM>;
 )
 
 ZMK_TAP_DANCE(tdl_nav_del_mac,
