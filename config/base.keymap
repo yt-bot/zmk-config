@@ -357,8 +357,8 @@ ZMK_MACRO(win_sleep,
 
 #define LIN_LOCK  &kp LG(L)
 #define MAC_LOCK  &kp LC(LG(Q))
-define MAC_NEXT_DESK &kp LC(LEFT)
-define MAC_PREV_DESK &kp LC(RIGHT)
+#define MAC_NEXT_DESK &kp LC(LEFT)
+#define MAC_PREV_DESK &kp LC(RIGHT)
 
 /* Keymap */
 
