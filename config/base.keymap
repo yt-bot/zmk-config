@@ -357,6 +357,8 @@ ZMK_MACRO(win_sleep,
 
 #define LIN_LOCK  &kp LG(L)
 #define MAC_LOCK  &kp LC(LG(Q))
+define MAC_NEXT_DESK &kp LC(LEFT)
+define MAC_PREV_DESK &kp LC(RIGHT)
 
 /* Keymap */
 
@@ -456,7 +458,7 @@ ZMK_LAYER(nav_mac,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &sk LCTRL     &sk LALT      &sk LSHFT     &sk LGUI      ___             X_MM     &kp PG_DN     NAV_LEFT_MAC  NAV_DOWN_MAC  NAV_RIGHT_MAC &kp RET         X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     MAC_LOCK      ___           ___           ___           ___             X_MB     &kp INS       &kp TAB       &kp LT        &kp GT        ___             X_RB
+    X_LB     MAC_LOCK      ___           ___           ___           ___             X_MB     &kp TAB       &kp ESC       MAC_PREV_DESK MAC_NEXT_DESK ___            X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯ ├──────┤
     X_LH                                               &to EN_MAC    &to SV_MAC      X_MH     &to SV_MAC    &to EN_MAC                                                X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
