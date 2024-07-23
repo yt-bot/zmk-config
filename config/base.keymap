@@ -189,7 +189,7 @@ ZMK_TAP_DANCE(num_dance,
 
 
 #define SMART_NUM_MAC &smart_num_mac NUM_MAC 0
-ZMK_HOLD_TAP(smart_num,
+ZMK_HOLD_TAP(smart_num_mac,
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <QUICK_TAP_MS>;
@@ -386,7 +386,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp Z         &kp X         &kp C         &tdl_sym_v    &kp B           X_MB     &kp N     &lt_layer_key SYM M  &kp COMMA  &kp DOT       &mt BSLH FSLH   X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
-    X_LH                                  NAV_BSPC     &smart_shft   &tdl_nav_del    X_MH     SMART_NUM     &lt FN RET   &lt_spc NAV 0                                X_RH
+    X_LH                                  NAV_BSPC     &smart_shft   &tdl_nav_del    X_MH     SMART_NUM     &lt FN RET   &lt_spc SYM 0                                X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
 )
 
@@ -398,7 +398,7 @@ ZMK_LAYER(sv,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &mt W Z       &kp X         &kp C         &tdl_sym_v    &kp B           X_MB     &kp N     &lt_layer_key SYM M  &kp COMMA  &kp DOT       &mt BSLH FSLH   X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
-    X_LH                                  NAV_BSPC     &smart_shft   &tdl_nav_del    X_MH     SMART_NUM     &lt FN RET   &lt_spc NAV 0                                X_RH
+    X_LH                                  NAV_BSPC     &smart_shft   &tdl_nav_del    X_MH     SMART_NUM     &lt FN RET   &lt_spc SYM 0                                X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
 )
 
@@ -410,7 +410,7 @@ ZMK_LAYER(en_mac,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp Z         &kp X         &kp C         &tdl_sym_v    &kp B           X_MB     &kp N     &lt_layer_key SYM M  &kp COMMA  &kp DOT       &mt BSLH FSLH   X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
-    X_LH                                 NAV_BSPC_MAC  &smart_shft &tdl_nav_del_mac  X_MH     SMART_NUM_MAC &lt FN RET    &lt_spc NAV 0                               X_RH
+    X_LH                                 NAV_BSPC_MAC  &smart_shft &tdl_nav_del_mac  X_MH     SMART_NUM_MAC &lt FN RET    &lt_spc SYM 0                               X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
 )
 
@@ -422,7 +422,7 @@ ZMK_LAYER(sv_mac,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &mt W Z       &kp X         &kp C         &tdl_sym_v    &kp B           X_MB     &kp N     &lt_layer_key SYM M  &kp COMMA  &kp DOT       &mt BSLH FSLH   X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
-    X_LH                                 NAV_BSPC_MAC  &smart_shft &tdl_nav_del_mac  X_MH     SMART_NUM_MAC &lt FN RET    &lt_spc NAV 0                               X_RH
+    X_LH                                 NAV_BSPC_MAC  &smart_shft &tdl_nav_del_mac  X_MH     SMART_NUM_MAC &lt FN RET    &lt_spc SYM 0                               X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
 )
 
@@ -543,6 +543,6 @@ ZMK_LAYER(typing_sv,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     &kp W    &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N     &lt_layer_key SYM M  &kp COMMA  &kp DOT       &mt BSLH FSLH  &kp RALT
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
-    &to DEF                               NAV_BSPC     &smart_shft   &tdl_nav_del    X_MH     SMART_NUM     &lt FN RET   &lt_spc NAV 0                                XXX
+    &to DEF                               NAV_BSPC     &smart_shft   &tdl_nav_del    X_MH     SMART_NUM     &lt FN RET   &lt_spc SYM 0                                XXX
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
 )
