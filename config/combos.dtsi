@@ -26,7 +26,7 @@
 // Layer combos
 ZMK_COMBO(grk,          &sl UC,                     RT1 RT3,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(cpgrk,        &sls 0,                     RT1 RT2 RT3,  DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(ssys,         &lt SYS,                    RT3 RT4,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(ssys,         &mo SYS,                    RT3 RT4,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Horizontal combos - left hand */
 ZMK_COMBO(esc,        &kp ESC,                      LT3 LT2,      DEF SV EN_MAC SV_MAC NAV NAV_MAC NUM NUM_MAC TYPING,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
