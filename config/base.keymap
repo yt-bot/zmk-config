@@ -141,8 +141,10 @@ ZMK_HOLD_TAP(mt_end, bindings = <&masked_end>, <&kp>; MT_CORE)
 ZMK_HOLD_TAP(mac_mt_home, bindings = <&mac_masked_home>, <&kp>; MT_CORE)
 ZMK_HOLD_TAP(mac_mt_end, bindings = <&mac_masked_end>, <&kp>; MT_CORE)
 
-#define NAV_LEFT  &mt_home 0   LEFT    // tap: left  | long-tap: beginning of line
-#define NAV_RIGHT &mt_end 0    RIGHT   // tap: right | long-tap: end       of line
+#define NAV_LEFT  &mt LC(LEFT)   LEFT    // tap: left  | long-tap: beginning of line
+#define NAV_RIGHT &mt LC(RIGHT)    RIGHT   // tap: right | long-tap: end       of line
+//#define NAV_LEFT  &mt_home 0   LEFT    // tap: left  | long-tap: beginning of line
+//#define NAV_RIGHT &mt_end 0    RIGHT   // tap: right | long-tap: end       of line
 #define NAV_UP    &mt LC(HOME) UP      // tap: up    | long-tap: beginning of document
 #define NAV_DOWN  &mt LC(END)  DOWN    // tap: down  | long-tap: end       of document
 #define NAV_BSPC  &mt LC(BSPC) BSPC    // tap: bspc  | long-tap: delete word backward
@@ -178,6 +180,20 @@ ZMK_MOD_MORPH(smart_shft,
 &caps_word {  // mods deactivate caps-word, requires PR #1451
     /delete-property/ ignore-modifiers;
 };
+
+// tap: sticky shift | double tap: sticky sym layer | hold: sym layer
+#define SK_SHIFT_SYM &shift_sym SYM 0
+ZMK_HOLD_TAP(shift_sym,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&mo>, <&sym_dance>;
+)
+ZMK_TAP_DANCE(sym_dance,
+    tapping-term-ms = <200>;
+    bindings = <&sl SYM>, <&sk LSHFT>;  // reverse this for sticky-sym on single tap
+)
+
 
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
 #define SMART_NUM &smart_num NUM 0
@@ -393,7 +409,7 @@ ZMK_LAYER(base,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT       &mt BSLH FSLH   X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
-    X_LH                                  &smart_shft  SMART_NUM     ___             X_MH     ___           &lt FN RET    &lt_spc NAV_LH 0                            X_RH
+    X_LH                                  NAV_BSPC     SMART_NUM     ___             X_MH     ___           &lt FN RET    &lt_spc NAV_LH 0                            X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
 )
 
@@ -405,7 +421,7 @@ ZMK_LAYER(sv,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &mt W Z       &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT       &mt BSLH FSLH   X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
-    X_LH                                   &smart_shft  SMART_NUM     ___             X_MH     ___           &lt FN RET    &lt_spc NAV_LH 0                           X_RH
+    X_LH                                  NAV_BSPC     SMART_NUM     ___             X_MH     ___           &lt FN RET    &lt_spc NAV_LH 0                           X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
 )
 
