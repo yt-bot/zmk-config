@@ -191,7 +191,7 @@ ZMK_HOLD_TAP(shift_sym,
 )
 ZMK_TAP_DANCE(sym_dance,
     tapping-term-ms = <200>;
-    bindings = <&sl SYM>, <&sk LSHFT>;  // reverse this for sticky-sym on single tap
+    bindings = <&sk LSHFT>, <&sl SYM>;  // reverse this for sticky-sym on single tap
 )
 
 
