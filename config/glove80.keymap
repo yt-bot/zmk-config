@@ -11,9 +11,9 @@
 #define X_LM    &kp TAB
 #define X_RM    &none
 
-#define X_LB    &kp LSHFT
-#define X_MB    SK_SHIFT_SYM &none &none       &none &none &mo SYM
-#define X_RB    &kp RSHFT
+#define X_LB    &smart_shft
+#define X_MB    SK_SHIFT_SYM &none &none       &none &none &mo SK_SHIFT_SYM
+#define X_RB    &smart_shft
 
 #define X_LH    &none &none &none &kp LEFT &kp RIGHT
 //#define X_MH    &lt 8 A &lt NAV B
