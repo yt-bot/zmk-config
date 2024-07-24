@@ -149,9 +149,11 @@ ZMK_HOLD_TAP(mac_mt_end, bindings = <&mac_masked_end>, <&kp>; MT_CORE)
 #define NAV_DEL   &mt LC(DEL)  DEL     // tap: del   | long-tap: delete word forward
 
 #define NAV_UP_MAC    &mt LG(UP) UP      // tap: up    | long-tap: beginning of document
-#define NAV_DOWN_MAC  &mt LG(DOWN)  DOWN    // tap: down  | long-tap: end       of document
-#define NAV_LEFT_MAC  &mac_mt_home 0   LEFT    // tap: left  | long-tap: beginning of line
-#define NAV_RIGHT_MAC &mac_mt_end 0    RIGHT   // tap: right | long-tap: end       of line
+#define NAV_DOWN_MAC  &mt LG(DOWN)  DOWN    // tap: down  | long-tap: end of document
+#define NAV_LEFT_MAC  &mt LA(LEFT)   LEFT    // tap: left  | long-tap: beginning of word
+#define NAV_RIGHT_MAC &mt LA(RIGHT)    RIGHT   // tap: right | long-tap: end f word
+//#define NAV_LEFT_MAC  &mac_mt_home 0   LEFT    // tap: left  | long-tap: beginning of line
+//#define NAV_RIGHT_MAC &mac_mt_end 0    RIGHT   // tap: right | long-tap: end       of line
 #define NAV_BSPC_MAC  &mt LA(BSPC) BSPC    // tap: bspc  | long-tap: delete word backward
 #define NAV_DEL_MAC   &mt LA(DEL)  DEL     // tap: del   | long-tap: delete word forward
 
