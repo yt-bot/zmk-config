@@ -20,7 +20,7 @@
 #define HRC_RPAR        &hmr_rpar_gt          RS(LALT)  0
 
 // Mac variants
-#define HRC_REPEAT_MAC  &hml_repeat           LS(LGUI)  0NAV_MAC_LH
+#define HRC_REPEAT_MAC  &hml_repeat           LS(LGUI)  0
 #define HRC_LPAR_MAC    &hmr_lpar_lt          RS(LGUI)  0
 
 // Layer combos
