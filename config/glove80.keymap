@@ -12,7 +12,7 @@
 #define X_RM    &none
 
 #define X_LB    &none
-#define X_MB    &mo SYM &none &none       &none &none &mo SYM
+#define X_MB    &smart_shft &none &none       &none &none &mo SYM
 #define X_RB    &none
 
 #define X_LH    &none &none &none &kp LEFT &kp RIGHT
