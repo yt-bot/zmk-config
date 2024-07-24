@@ -34,8 +34,8 @@ ZMK_COMBO(esc,        &kp ESC,                      LT3 LT2,      DEF SV EN_MAC 
 ZMK_COMBO(ret,        &kp RETURN,                   LT2 LT1,      DEF SV EN_MAC SV_MAC NAV_LH NAV_MAC_LH NUM NUM_MAC TYPING,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 ZMK_COMBO(tab,        HRC_TAB,                      LM3 LM2,      DEF SV EN_MAC SV_MAC NAV_LH NAV_MAC_LH NUM NUM_MAC TYPING,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(repeat,     HRC_REPEAT,                   LM2 LM1,      DEF SV EN_MAC SV_MAC NAV_LH NAV_MAC_LH NUM NUM_MAC TYPING,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(repeat_mac, HRC_REPEAT_MAC,               LM2 LM1,      DEF SV EN_MAC SV_MAC NAV_LH NAV_MAC_LH NUM NUM_MAC TYPING,  COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(repeat,     HRC_REPEAT,                   LM2 LM1,      DEF SV NAV_LH NUM TYPING,                                   COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(repeat_mac, HRC_REPEAT_MAC,               LM2 LM1,      EN_MAC SV_MAC NAV_MAC_LH NUM_MAC,                           COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 ZMK_COMBO(cut,        &kp LC(X),                    LB3 LB1,      DEF SV NAV_LH NUM NUM_MAC,                                  COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(copy,       &kp LC(C),                    LB3 LB2,      DEF SV NAV_LH NUM NUM_MAC,                                  COMBO_TERM_FAST, COMBO_IDLE_FAST)
