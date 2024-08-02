@@ -377,11 +377,11 @@ ZMK_LAYER(base,
 
 ZMK_LAYER(sv,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp Q       &kp SV_A_UMLAUT &kp E         &kp R         &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O       &kp SV_O_UMLAUT   X_RT
+    X_LT     &kp Q       &kp SV_A_UMLAUT &kp E         &kp R         &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O       &mt SV_A_RING SV_SQT X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G           X_MM     &kp H         &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI P     X_RM_SV 
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &mt W Z       &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT       &mt BSLH FSLH   X_RB
+    X_LB_SV  &kp Z       &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT     &mt SV_BSLH SV_FSLH X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
     X_LH                                  NAV_BSPC     SMART_NUM     ___             X_MH     ___           &lt FN RET    &lt_spc NAV_LH 0                           X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
@@ -405,7 +405,7 @@ ZMK_LAYER(sv_mac,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &hml LCTRL A  &hml LALT S   &hml LSHFT D  &hml LGUI F   &kp G           X_MM     &kp H         &hmr RGUI J   &hmr RSHFT K  &hmr LALT L   &hmr RCTRL P    X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &mt W Z       &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT       &mt BSLH FSLH   X_RB
+    X_LB     &kp Z       &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT       &mt BSLH FSLH   X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
     X_LH                                 NAV_BSPC_MAC  SMART_NUM     ___             X_MH     ___           &lt FN RET    &lt_spc NAV_MAC_LH 0                        X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
@@ -413,11 +413,11 @@ ZMK_LAYER(sv_mac,
 
 ZMK_LAYER(typing_sv,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp Q       &kp SV_A_UMLAUT &kp E         &kp R         &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O      &kp SV_O_UMLAUT    X_RT
+    X_LT     &kp Q       &kp SV_A_UMLAUT &kp E         &kp R         &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O         &mt SV_A_RING SV_SQT X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &mt UNDER G     X_MM     &mt EXCL H    &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI P     X_RM
+    X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &mt UNDER G     X_MM     &mt EXCL H    &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI P     X_RM_SV 
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp Z         &kp X         &kp C         &kp V         &mt AT B        X_MB     &kp N         &kp M         &kp COMMA     &kp DOT       &kp SV_A_RING   X_RB
+    X_LB_SV  &kp Z         &kp X         &kp C         &kp V         &mt AT B        X_MB     &kp N         &kp M         &kp COMMA     &kp DOT       &kp             X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
     X_LH                                  NAV_BSPC     SMART_NUM     ___             X_MH     ___           &lt FN RET    &lt_spc NAV_LH 0                            X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
@@ -515,7 +515,7 @@ ZMK_LAYER(sym,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp BSLH      &kp UNDER     &kp TILDE     &kp GRAVE     &kp PIPE        X_MB     &kp AMPS      &kp LBKT      &kp PLUS      &kp RBKT      &kp CARET       X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯ ├──────┤
-    X_LH                                  &to DEF      &to SV      &lin_euro_sign    X_MH    &mac_euro_sign &to SV_MAC    &to EN_MAC                                  X_RH
+    X_LH                                               &to SV      &lin_euro_sign    X_MH    &mac_euro_sign &to SV_MAC                                                X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
@@ -523,15 +523,13 @@ ZMK_LAYER(sym_sv,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     &kp SV_PRCNT   &kp SV_AT    &kp SV_HASH   &kp SV_DLLR   &kp SV_LT       X_MT     &kp SV_GT     &kp SV_LBRC   &kp SV_STAR   &kp SV_RBRC  &kp SV_SEMICOLON X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &kp SV_SQT    &kp SV_DQT    &kp SV_MINUS  &kp SV_EQUAL  &kp SV_QMARK    X_MM     &kp EXCL      &kp SV_LPAR   &kp SV_FSLH   &kp SV_RPAR   &kp SV_COLON    X_RM
+    X_LM     &kp SV_SQT    &kp SV_MINUS  &kp SV_DQT    &kp SV_EQUAL  &kp SV_QMARK    X_MM     &kp EXCL      &kp SV_LPAR   &kp SV_FSLH   &kp SV_RPAR   &kp SV_COLON    X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp SV_BSLH   &kp SV_UNDER  &kp SV_TILDE  &kp SV_GRAVE  &kp SV_PIPE     X_MB     &kp SV_AMPS   &kp SV_LBKT   &kp SV_PLUS   &kp SV_RBKT   &kp SV_CARET    X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯ ├──────┤
-    X_LH                                  &to DEF      &to SV      &lin_euro_sign    X_MH    &mac_euro_sign &to SV_MAC    &to EN_MAC                                  X_RH
+    X_LH                                               &to SV        &kp SV_EURO     X_MH    &mac_euro_sign &to SV_MAC                                                X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
-
-
 
 ZMK_LAYER(sys,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
