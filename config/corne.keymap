@@ -6,12 +6,12 @@
 #define X_LM    &kp TAB          // middle row, left
 #define X_LB    &kp &smart_shft  // bottom row, left
 #define X_LB_SV &kp W            // swedish layer, bottom row, left
-//#define X_LH    SK_SHIFT_SYM     // thumb row, left
+#define X_LH    SK_SHIFT_SYM     // thumb row, left
 
 #define X_RT    &kp DELETE       // top row, right
 #define X_RM_SV &kp SV_O_UMLAUT  // swedish layer, middle row right
 #define X_RB    &smart_shft      // bottom row, right
-//#define X_MH    SK_SHIFT_SYM    SK_SHIFT_SYM  // thumb row, right
+#define X_RH    SMART_NUM        // thumb row, right
 
 /* activate bluetooth */
 #define CONFIG_WIRELESS 1
