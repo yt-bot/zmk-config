@@ -40,50 +40,6 @@
 
 /* Global settings */
 
-// Override en-us specific locales.
-#undef  AMPS
-#define AMPS  LS(N7)
-#undef  AT
-#define AT    LS(N2)
-#undef  CARET
-#define CARET LS(N6)
-#undef  COLON
-#define COLON LS(SEMI)
-#undef  DLLR
-#define DLLR  LS(N4)
-#undef  DQT
-#define DQT   LS(SQT)
-#undef  EXCL
-#define EXCL  LS(N1)
-#undef  GT
-#define GT    LS(DOT)
-#undef  HASH
-#define HASH  LS(N3)
-#undef  LBRC
-#define LBRC  LS(LBKT)
-#undef  LPAR
-#define LPAR  LS(N9)
-#undef  LT
-#define LT    LS(COMMA)
-#undef  PIPE
-#define PIPE  LS(BSLH)
-#undef  PLUS
-#define PLUS  LS(EQUAL)
-#undef  PRCNT
-#define PRCNT LS(N5)
-#undef  QMARK
-#define QMARK LS(FSLH)
-#undef  RBRC
-#define RBRC  LS(RBKT)
-#undef  RPAR
-#define RPAR  LS(N0)
-#undef  STAR
-#define STAR  LS(N8)
-#undef  TILDE
-#define TILDE LS(GRAVE)
-#undef  UNDER
-#define UNDER LS(MINUS)
-
 #define QUICK_TAP_MS 175
 
 &sk {  // sticky-key config
@@ -420,7 +376,7 @@ ZMK_LAYER(base,
 
 ZMK_LAYER(sv,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp Q         &kp SQT       &kp E         &kp R         &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O         &kp SEMICOLON   X_RT
+    X_LT     &kp Q       &kp SV_A_UMLAUT &kp E         &kp R         &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O       &kp SV_O_UMLAUT   X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G           X_MM     &kp H         &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI P     X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
