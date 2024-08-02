@@ -20,4 +20,4 @@
 #include "base.keymap"
 
 /* use 6-column layout for Corne */
-ZMK_APPLY_MATRIX_TRANSFORM(six_column_transform)
+//ZMK_APPLY_MATRIX_TRANSFORM(six_column_transform)
