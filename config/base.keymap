@@ -555,7 +555,7 @@ ZMK_LAYER(sym_sv_mac,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &kp SV_SQT    &kp SV_MINUS  &kp SV_DQT    &kp SV_EQUAL  &kp SV_QMARK    X_MM     &kp EXCL      &kp SV_LPAR   &kp SV_FSLH   &kp SV_RPAR   &kp SV_COLON    X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp MAC_BSLH  &kp SV_UNDER  &kp SV_TILDE  &kp SV_GRAVE  &kp SV_LBRC     X_MB     &kp SV_AMPS   &kp SV_LBKT   &kp SV_PLUS   &kp SV_RBKT   &kp SV_CARET    X_RB
+    X_LB     MAC_BSLH  &kp SV_UNDER  &kp SV_TILDE  &kp SV_GRAVE  &kp SV_LBRC     X_MB     &kp SV_AMPS   &kp SV_LBKT   &kp SV_PLUS   &kp SV_RBKT   &kp SV_CARET    X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯ ├──────┤
     X_LH                                               &to SV        &kp SV_EURO     X_MH    &mac_euro_sign &to SV_MAC                                                X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
