@@ -155,7 +155,7 @@ ZMK_TAP_DANCE(sym_dance,
     bindings = <&sk LSHFT>, <&sl SYM_SV>;  // reverse this for sticky-sym on single tap
 )
 
-#define SK_SHIFT_SYM &shift_sym SYM_SV_MAC 0
+#define SK_SHIFT_SYM_MAC &shift_sym SYM_SV_MAC 0
 ZMK_HOLD_TAP(shift_sym,
     flavor = "balanced";
     tapping-term-ms = <200>;
@@ -410,7 +410,7 @@ ZMK_LAYER(en_mac,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M        &kp COMMA      &kp DOT       &mt BSLH FSLH   X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
-    X_LH                                               NAV_BSPC     SK_SHIFT_SYM    X_MH     &lt FN RET &lt_spc NAV_LH 0                                              X_RH
+    X_LH                                               NAV_BSPC     SK_SHIFT_SYM     X_MH     &lt FN RET &lt_spc NAV_LH 0                                              X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
 )
 
@@ -422,7 +422,7 @@ ZMK_LAYER(sv_mac,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB_SV  &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT     &mt SV_BSLH SV_FSLH X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
-    X_LH                                                NAV_BSPC     SK_SHIFT_SYM    X_MH     &lt FN RET &lt_spc NAV_LH 0                                             X_RH
+    X_LH                                                NAV_BSPC     SK_SHIFT_SYM_MAC    X_MH     &lt FN RET &lt_spc NAV_LH 0                                             X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
 )
 
