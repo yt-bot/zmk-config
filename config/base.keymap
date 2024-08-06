@@ -29,8 +29,9 @@
 #define NUM_MAC 11
 #define SYM 12
 #define SYM_SV 13
-#define SYS 14
-#define UC 15
+#define SYM_SV_MAC 14
+#define SYS 15
+#define UC 16
 
 
 #include "combos.dtsi"  // requires layer aliases
@@ -152,6 +153,18 @@ ZMK_HOLD_TAP(shift_sym,
 ZMK_TAP_DANCE(sym_dance,
     tapping-term-ms = <200>;
     bindings = <&sk LSHFT>, <&sl SYM_SV>;  // reverse this for sticky-sym on single tap
+)
+
+#define SK_SHIFT_SYM &shift_sym SYM_SV_MAC 0
+ZMK_HOLD_TAP(shift_sym,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&mo>, <&sym_dance>;
+)
+ZMK_TAP_DANCE(sym_dance,
+    tapping-term-ms = <200>;
+    bindings = <&sk LSHFT>, <&sl SYM_SV_MAC>;  // reverse this for sticky-sym on single tap
 )
 
 
@@ -341,6 +354,10 @@ ZMK_MACRO(win_sleep,
 #define MAC_NEXT_DESK &kp LC(RIGHT)
 #define MAC_PREV_DESK &kp LC(LEFT)
 
+// mac hid codes for braces aren't working when using FI layout, replace with key presses
+#define MAC_LBRC &kp LA(LS(N8))
+#define MAC_RBRC &kp LA(LS(N9))
+
 /* Keymap */
 
 // Linux unicodes
@@ -524,6 +541,18 @@ ZMK_LAYER(sym_sv,
     X_LM     &kp SV_SQT    &kp SV_MINUS  &kp SV_DQT    &kp SV_EQUAL  &kp SV_QMARK    X_MM     &kp EXCL      &kp SV_LPAR   &kp SV_FSLH   &kp SV_RPAR   &kp SV_COLON    X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp SV_BSLH   &kp SV_UNDER  &kp SV_TILDE  &kp SV_GRAVE  &kp PIPE        X_MB     &kp SV_AMPS   &kp SV_LBKT   &kp SV_PLUS   &kp SV_RBKT   &kp SV_CARET    X_RB
+//├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯ ├──────┤
+    X_LH                                               &to SV        &kp SV_EURO     X_MH    &mac_euro_sign &to SV_MAC                                                X_RH
+//╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
+)
+
+ZMK_LAYER(sym_sv_mac,
+//╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
+    X_LT     &kp SV_PRCNT   &kp SV_AT    &kp SV_HASH   &kp SV_DLLR   &kp LT          X_MT     &kp GT        MAC_LBRC      &kp SV_STAR   MAC_RBRC  &kp SV_SEMICOLON X_RT
+//├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+    X_LM     &kp SV_SQT    &kp SV_MINUS  &kp SV_DQT    &kp SV_EQUAL  &kp SV_QMARK    X_MM     &kp EXCL      &kp SV_LPAR   &kp SV_FSLH   &kp SV_RPAR   &kp SV_COLON    X_RM
+//├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+    X_LB     &kp BSLH      &kp SV_UNDER  &kp SV_TILDE  &kp SV_GRAVE  &kp SV_LBRC     X_MB     &kp SV_AMPS   &kp SV_LBKT   &kp SV_PLUS   &kp SV_RBKT   &kp SV_CARET    X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯ ├──────┤
     X_LH                                               &to SV        &kp SV_EURO     X_MH    &mac_euro_sign &to SV_MAC                                                X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
