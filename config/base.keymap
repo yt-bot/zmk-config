@@ -551,7 +551,7 @@ ZMK_LAYER(sym_sv,
 
 ZMK_LAYER(sym_sv_mac,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp SV_PRCNT  &kp SV_AT     &kp SV_HASH   &kp SV_DLLR   &kp NON_US_BSLH X_MT     &kp NON_US_BSLH  MAC_LBRC   &kp SV_STAR   MAC_RBRC    &kp SV_SEMICOLON  X_RT
+    X_LT     &kp SV_PRCNT  &kp SV_AT     &kp SV_HASH   &kp SV_DLLR   &kp NON_US_BSLH X_MT     &kp LS(NON_US_BSLH)  MAC_LBRC   &kp SV_STAR   MAC_RBRC    &kp SV_SEMICOLON  X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &kp SV_SQT    &kp SV_MINUS  &kp SV_DQT    &kp SV_EQUAL  &kp SV_QMARK    X_MM     &kp EXCL      &kp SV_LPAR   &kp SV_FSLH   &kp SV_RPAR   &kp SV_COLON    X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
