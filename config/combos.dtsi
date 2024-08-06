@@ -108,5 +108,3 @@ ZMK_COMBO(pipe,       &kp PIPE,                     RM0 RB0,      SV SV_MAC TYPI
 ZMK_COMBO(minus,      &kp SV_MINUS,                 RM1 RB1,      SV SV_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(fslh,       &kp SV_FSLH,                  RM2 RB2,      SV SV_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(under,      &kp SV_UNDER,                 RM3 RB3,      SV SV_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
-
-p'p'^*+&|_,kk,,kk,__---hn|-|-,kk,_p//pyh&+*^p'/pqa$@"#%zaza`\vfvf~
