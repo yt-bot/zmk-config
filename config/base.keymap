@@ -14,6 +14,7 @@
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/swedish.dtsi"
 #include "keys_sv.h"
+#include "keys_se_finland_sweden.h"
 
 #define DEF 0
 #define SV 1
