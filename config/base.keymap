@@ -358,8 +358,8 @@ ZMK_MACRO(win_sleep,
 #define MAC_LBRC &kp LA(LS(N8))
 #define MAC_RBRC &kp LA(LS(N9))
 #define MAC_BSLH &kp LA(LS(N7))
-#define MAC_LT   &kp NON_US_BLSH
-#define MAC_LG   &kp LS(NON_US_BLSH)
+//#define MAC_LT   &kp NON_US_BLSH
+//#define MAC_GT   &kp LS(NON_US_BLSH)
 
 /* Keymap */
 
@@ -551,11 +551,11 @@ ZMK_LAYER(sym_sv,
 
 ZMK_LAYER(sym_sv_mac,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp SV_PRCNT   &kp SV_AT    &kp SV_HASH   &kp SV_DLLR   MAC_LT          X_MT     MAC_LG        MAC_LBRC      &kp SV_STAR   MAC_RBRC  &kp SV_SEMICOLON    X_RT
+    X_LT     &kp SV_PRCNT  &kp SV_AT     &kp SV_HASH   &kp SV_DLLR   &kp LT          X_MT     &kp GT        MAC_LBRC      &kp SV_STAR   MAC_RBRC    &kp SV_SEMICOLON  X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &kp SV_SQT    &kp SV_MINUS  &kp SV_DQT    &kp SV_EQUAL  &kp SV_QMARK    X_MM     &kp EXCL      &kp SV_LPAR   &kp SV_FSLH   &kp SV_RPAR   &kp SV_COLON    X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     MAC_BSLH  &kp SV_UNDER  &kp SV_TILDE  &kp SV_GRAVE  &kp SV_LBRC     X_MB     &kp SV_AMPS   &kp SV_LBKT   &kp SV_PLUS   &kp SV_RBKT   &kp SV_CARET    X_RB
+    X_LB     MAC_BSLH      &kp SV_UNDER  &kp SV_TILDE  &kp SV_GRAVE  &kp SV_LBRC     X_MB     &kp SV_AMPS   &kp SV_LBKT   &kp SV_PLUS   &kp SV_RBKT   &kp SV_CARET    X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯ ├──────┤
     X_LH                                               &to SV        &kp SV_EURO     X_MH    &mac_euro_sign &to SV_MAC                                                X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
