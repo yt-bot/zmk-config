@@ -19,5 +19,5 @@ include:
     shield: corne_right
   - board: nice_nano_v2
     shield: settings_reset
-#  - board: glove80_lh
-#  - board: glove80_rh
+  - board: glove80_lh
+  - board: glove80_rh
