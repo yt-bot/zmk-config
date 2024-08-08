@@ -10,14 +10,13 @@
 
 #define X_LM    &kp TAB
 #define X_RM    &none
-
 #define X_RM_SV_MAC &mac_sv_oe
-#define X_RM_SV &kp SV_O_UMLAUT
 #define X_LB_SV &kp W            // swedish layer, bottom row, left
 
 #define X_LB    &smart_shft
 #define X_MB    SK_SHIFT_SYM &none &none       &none &none SK_SHIFT_SYM
 #define X_RB    &smart_shft
+
 
 #define X_LH    &none &none &none &kp LEFT &kp RIGHT
 //#define X_MH    &lt 8 A &lt NAV B
