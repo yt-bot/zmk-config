@@ -87,7 +87,7 @@ ZMK_COMBO(under,      &kp UNDER,                    RM3 RB3,      DEF EN_MAC NAV
 
 /* Swedish combos */
 /* Vertical combos - left hand */
-ZMK_COMBO(dllr,       &kp SV_DLLR,                  LT4 LM4,      SV SV_MAC TYPING,                           COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(dllr,       &kp SV_DLLR,                  LT4 LM4,      SV SV_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(at,         &kp SV_AT,                    LT3 LM3,      SV SV_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(dqt,        &kp SV_DQT,                   LT2 LM2,      SV SV_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(hash,       &kp SV_HASH,                  LT1 LM1,      SV SV_MAC TYPING,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
