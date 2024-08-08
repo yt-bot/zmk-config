@@ -144,7 +144,7 @@ ZMK_MOD_MORPH(smart_shft,
 };
 
 // tap: sticky shift | double tap: sticky sym layer | hold: sym layer
-#define SK_SHIFT_SYM &shift_sym SYM_SV 0
+#define SK_SHIFT_SYM &shift_sym SYM 0
 ZMK_HOLD_TAP(shift_sym,
     flavor = "balanced";
     tapping-term-ms = <200>;
@@ -156,7 +156,7 @@ ZMK_TAP_DANCE(sym_dance,
     bindings = <&sk LSHFT>, <&sl SYM>;  // reverse this for sticky-sym on single tap
 )
 
-#define SK_SHIFT_SYM_MAC &shift_sym SYM_SV_MAC 0
+#define SK_SHIFT_SYM_MAC &shift_sym SYM 0
 ZMK_HOLD_TAP(shift_sym,
     flavor = "balanced";
     tapping-term-ms = <200>;
