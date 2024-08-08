@@ -156,7 +156,7 @@ ZMK_TAP_DANCE(sym_dance,
     bindings = <&sk LSHFT>, <&sl SYM>;  // reverse this for sticky-sym on single tap
 )
 
-#define SK_SHIFT_SYM_MAC &shift_sym SYM 0
+#define SK_SHIFT_SYM_SV &shift_sym SYM_SV 0
 ZMK_HOLD_TAP(shift_sym,
     flavor = "balanced";
     tapping-term-ms = <200>;
@@ -165,7 +165,7 @@ ZMK_HOLD_TAP(shift_sym,
 )
 ZMK_TAP_DANCE(sym_dance,
     tapping-term-ms = <200>;
-    bindings = <&sk LSHFT>, <&sl SYM>;  // reverse this for sticky-sym on single tap
+    bindings = <&sk LSHFT>, <&sl SYM_SV>;  // reverse this for sticky-sym on single tap
 )
 
 
@@ -405,7 +405,7 @@ ZMK_LAYER(sv,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB_SV  &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT     &mt SV_BSLH SV_FSLH X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
-    X_LH                                                NAV_BSPC     SK_SHIFT_SYM    X_MH     &lt FN RET &lt_spc NAV_LH 0                                             X_RH
+    X_LH                                                NAV_BSPC     SK_SHIFT_SYM_SV X_MH     &lt FN RET &lt_spc NAV_LH 0                                             X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
 )
 
