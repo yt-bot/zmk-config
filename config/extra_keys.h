@@ -66,9 +66,19 @@
 #if !defined X_RM_SV  // middle row, right
     #define X_RM_SV
 #endif
+
+#if !defined X_RM_SV_MAC  // middle row, right
+    #define X_RM_SV_MAC
+#endif
+
 #if !defined X_RB_SV  // bottom row, right
     #define X_RB_SV
 #endif
+
+#if !defined X_RB_SV_MAC  // bottom row, right
+    #define X_RB_SV_MAC
+#endif
+
 #if !defined X_RH_SV  // thumb row, right
     #define X_RH_SV
 #endif

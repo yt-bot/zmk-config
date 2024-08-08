@@ -165,7 +165,7 @@ ZMK_HOLD_TAP(shift_sym,
 )
 ZMK_TAP_DANCE(sym_dance,
     tapping-term-ms = <200>;
-    bindings = <&sk LSHFT>, <&sl SYM_SV_MAC>;  // reverse this for sticky-sym on single tap
+    bindings = <&sk LSHFT>, <&sl SYM>;  // reverse this for sticky-sym on single tap
 )
 
 
@@ -355,10 +355,15 @@ ZMK_MACRO(win_sleep,
 #define MAC_NEXT_DESK &kp LC(RIGHT)
 #define MAC_PREV_DESK &kp LC(LEFT)
 
-// mac hid codes for some symbols aren't working when using FI layout, replace with key presses
+// Separate Mac SV symbol layer keys
+// Note: mac hid codes for some symbols aren't working when using FI/SE layout, replace with key presses.
+// less than/greater than don't work when the keyboard layout is set to FI/SE, they are always replaced with section. https://www.reddit.com/r/ErgoDoxEZ/comments/n0rk9d/get_greater_than_sign_on_macos_german_keyboard/
 #define MAC_LBRC &kp LA(LS(N8)) // {
 #define MAC_RBRC &kp LA(LS(N9)) // }
 #define MAC_BSLH &kp LA(LS(N7)) // 
+
+//#define MAC_LT   &kp LA(LS(Y)) // < 
+//#define MAC_GT   &kp LA(LS(X)) // >
 
 /* Keymap */
 
@@ -416,15 +421,16 @@ ZMK_LAYER(en_mac,
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
 )
 
+// Set keyboard layout to unicode.
 ZMK_LAYER(sv_mac,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp Q       &kp SV_A_UMLAUT &kp E         &kp R         &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O       &mt SV_A_RING SV_SQT X_RT
+    X_LT     &kp Q         &mac_sv_ae    &kp E         &kp R         &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O         &kp SQT         X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &hml LCTRL A  &hml LALT S   &hml LSHFT D  &hml LGUI F   &kp G           X_MM     &kp H         &hmr LGUI J  &hmr RSHFT K  &hmr LALT L   &hmr LCTRL P    X_RM_SV 
+    X_LM     &hml LCTRL A  &hml LALT S   &hml LSHFT D  &hml LGUI F   &kp G           X_MM     &kp H         &hmr LGUI J  &hmr RSHFT K  &hmr LALT L   &hmr LCTRL P    X_RM_SV_MAC 
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB_SV  &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT       &kp SV_BSLH     X_RB
+    X_LB_SV  &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT       &kp BSLH        X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
-    X_LH                                                NAV_BSPC     SK_SHIFT_SYM_MAC    X_MH     &lt FN RET &lt_spc NAV_LH 0                                         X_RH
+    X_LH                                                NAV_BSPC     SK_SHIFT_SYM    X_MH     &lt FN RET &lt_spc NAV_LH 0                                            X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
 )
 
@@ -532,7 +538,7 @@ ZMK_LAYER(sym,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp BSLH      &kp UNDER     &kp TILDE     &kp GRAVE     &kp PIPE        X_MB     &kp AMPS      &kp LBKT      &kp PLUS      &kp RBKT      &kp CARET       X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯ ├──────┤
-    X_LH                                               &to SV      &lin_euro_sign    X_MH    &mac_euro_sign &to SV_MAC                                                X_RH
+    X_LH                                               &to DEF      &lin_euro_sign    X_MH    &mac_euro_sign &to SV_MAC                                                X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
@@ -550,7 +556,7 @@ ZMK_LAYER(sym_sv,
 
 ZMK_LAYER(sym_sv_mac,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp SV_PRCNT  &kp SV_AT     &kp SV_HASH   &kp SV_DLLR   &kp SE_LT       X_MT     &kp SE_GT     MAC_LBRC      &kp SV_STAR   MAC_RBRC    &kp SV_SEMICOLON  X_RT
+    X_LT     &kp SV_PRCNT  &kp SV_AT     &kp SV_HASH   &kp SV_DLLR   &kp SV_LT       X_MT     &kp SV_GT     MAC_LBRC      &kp SV_STAR   MAC_RBRC    &kp SV_SEMICOLON  X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &kp SV_SQT    &kp SV_MINUS  &kp SV_DQT    &kp SV_EQUAL  &kp SV_QMARK    X_MM     &kp EXCL      &kp SV_LPAR   &kp SV_FSLH   &kp SV_RPAR   &kp SV_COLON    X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
