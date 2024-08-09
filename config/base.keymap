@@ -532,23 +532,23 @@ ZMK_LAYER(num_mac,
 
 ZMK_LAYER(sym,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp PRCNT     &kp AT        &kp HASH      &kp DLLR      &kp LT          X_MT     &kp GT        &kp LBRC      &kp STAR      &kp RBRC      &kp SEMICOLON   X_RT
+    X_LT     &kp PRCNT     &kp AT        &kp HASH      &kp DLLR      &kp LT          X_MT     &kp GT        &kp LBRC      &kp STAR      &kp RBRC      &kp CARET       X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &kp SQT       &kp MINUS     &kp DQT       &kp EQUAL     &kp QMARK       X_MM     &kp EXCL      &kp LPAR      &kp FSLH      &kp RPAR      &kp COLON       X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp BSLH      &kp UNDER     &kp TILDE     &kp GRAVE     &kp PIPE        X_MB     &kp AMPS      &kp LBKT      &kp PLUS      &kp RBKT      &kp CARET       X_RB
+    X_LB     &kp BSLH      &kp UNDER     &kp TILDE     &kp GRAVE     &kp PIPE        X_MB     &kp AMPS      &kp LBKT      &kp PLUS      &kp RBKT      &kp SEMICOLON   X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯ ├──────┤
-    X_LH                                               &to DEF      &lin_euro_sign    X_MH    &mac_euro_sign &to SV_MAC                                                X_RH
+    X_LH                                               &to DEF      &lin_euro_sign    X_MH    &mac_euro_sign &to SV_MAC                                               X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
 )
 
 ZMK_LAYER(sym_sv,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp SV_PRCNT   &kp SV_AT    &kp SV_HASH   &kp SV_DLLR   &kp SV_LT       X_MT     &kp SV_GT     &kp SV_LBRC   &kp SV_STAR   &kp SV_RBRC  &kp SV_SEMICOLON X_RT
+    X_LT     &kp SV_PRCNT   &kp SV_AT    &kp SV_HASH   &kp SV_DLLR   &kp SV_LT       X_MT     &kp SV_GT     &kp SV_LBRC   &kp SV_STAR   &kp SV_RBRC  &kp SV_CARET     X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &kp SV_SQT    &kp SV_MINUS  &kp SV_DQT    &kp SV_EQUAL  &kp SV_QMARK    X_MM     &kp EXCL      &kp SV_LPAR   &kp SV_FSLH   &kp SV_RPAR   &kp SV_COLON    X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &kp SV_BSLH   &kp SV_UNDER  &kp SV_TILDE  &kp SV_GRAVE  &kp PIPE        X_MB     &kp SV_AMPS   &kp SV_LBKT   &kp SV_PLUS   &kp SV_RBKT   &kp SV_CARET    X_RB
+    X_LB     &kp SV_BSLH   &kp SV_UNDER  &kp SV_TILDE  &kp SV_GRAVE  &kp PIPE        X_MB     &kp SV_AMPS   &kp SV_LBKT   &kp SV_PLUS   &kp SV_RBKT   &kp SV_SEMICOLON X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯ ├──────┤
     X_LH                                               &to SV        &kp SV_EURO     X_MH    &mac_euro_sign &to SV_MAC                                                X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
@@ -556,11 +556,11 @@ ZMK_LAYER(sym_sv,
 
 ZMK_LAYER(sym_sv_mac,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp SV_PRCNT  &kp SV_AT     &kp SV_HASH   &kp SV_DLLR   &kp SV_LT       X_MT     &kp SV_GT     MAC_LBRC      &kp SV_STAR   MAC_RBRC    &kp SV_SEMICOLON  X_RT
+    X_LT     &kp SV_PRCNT  &kp SV_AT     &kp SV_HASH   &kp SV_DLLR   &kp SV_LT       X_MT     &kp SV_GT     MAC_LBRC      &kp SV_STAR   MAC_RBRC    &kp SV_CARET      X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &kp SV_SQT    &kp SV_MINUS  &kp SV_DQT    &kp SV_EQUAL  &kp SV_QMARK    X_MM     &kp EXCL      &kp SV_LPAR   &kp SV_FSLH   &kp SV_RPAR   &kp SV_COLON    X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     MAC_BSLH      &kp SV_UNDER  &kp SV_TILDE  &kp SV_GRAVE  &kp SV_LBRC     X_MB     &kp SV_AMPS   &kp SV_LBKT   &kp SV_PLUS   &kp SV_RBKT   &kp SV_CARET    X_RB
+    X_LB     MAC_BSLH      &kp SV_UNDER  &kp SV_TILDE  &kp SV_GRAVE  &kp SV_LBRC     X_MB     &kp SV_AMPS   &kp SV_LBKT   &kp SV_PLUS   &kp SV_RBKT   &kp SV_SEMICOLON X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯ ├──────┤
     X_LH                                               &to SV        &kp SV_EURO     X_MH    &mac_euro_sign &to SV_MAC                                                X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
