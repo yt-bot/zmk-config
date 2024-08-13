@@ -144,7 +144,7 @@ ZMK_MOD_MORPH(smart_shft,
 };
 
 // tap: sticky shift | double tap: sticky fn layer | hold: fn layer
-#define SK_SHIFT_SYM &shift_fn FN 0
+#define SK_SHIFT_FN &shift_fn FN 0
 ZMK_HOLD_TAP(shift_fn,
     flavor = "balanced";
     tapping-term-ms = <200>;
