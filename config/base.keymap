@@ -331,11 +331,6 @@ ZMK_TAP_DANCE(tdl_sym_bspc,
     bindings = <&lt SYM BACKSPACE>, <&to SYM>;
 )
 
-ZMK_TAP_DANCE(tdl_nav_del_mac,
-    tapping-term-ms = <200>;
-    bindings = <&lt NAV_MAC DEL>, <&to NAV_MAC>;
-)
-
 ZMK_MACRO(end_quote_comma,
     bindings = <&kp COMMA &kp DQT &kp SPACE>;
 )
