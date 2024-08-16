@@ -103,7 +103,7 @@ ZMK_COMBO(plus,       &kp SV_PLUS,                  RT1 RM1,      SV SV_MAC,  CO
 ZMK_COMBO(star,       &kp SV_STAR,                  RT2 RM2,      SV SV_MAC,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(caret,      &kp SV_CARET,                 RT3 RM3,      SV SV_MAC,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
-ZMK_COMBO(pipe,       &kp PIPE,                     RM0 RB0,      SV SV_MAC,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(pipe,       &kp SV_PIPE,                  RM0 RB0,      SV SV_MAC,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(minus,      &kp SV_MINUS,                 RM1 RB1,      SV SV_MAC,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(fslh,       &kp SV_FSLH,                  RM2 RB2,      SV SV_MAC,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 ZMK_COMBO(under,      &kp SV_UNDER,                 RM3 RB3,      SV SV_MAC,  COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
