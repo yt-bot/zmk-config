@@ -460,7 +460,7 @@ ZMK_LAYER(linux_gaming,
 
 // Linux colemakish Swedish layout. Set keyboard layout to sv/fi on the host.
 // See corne.keymap and glove80.keymap for key placements, including W.
-ZMK_LAYER(linux,
+ZMK_LAYER(linux_cole,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
     X_LT     &kp Q         &kp W         &kp F         &kp P         &kp B           X_MT     &kp J         &kp L         &kp U         &kp Y       &mt SV_O_UMLAUT SV_SQT X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
