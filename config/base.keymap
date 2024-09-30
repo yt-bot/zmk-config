@@ -21,16 +21,17 @@
 #define SV 2
 #define DEF 3
 #define SV_GAME 4
-#define NAV_LH 5
-#define NAV_MAC_LH 6
-#define FN 7
-#define NUM 8
-#define NUM_MAC 9
-#define SYM 10
-#define SYM_SV 11
-#define SYM_SV_MAC 12
-#define SYS 13
-#define UC 14
+#define SV_COLE 5
+#define 6
+#define NAV_MAC_LH 7
+#define FN 8
+#define NUM 9
+#define NUM_MAC 10
+#define SYM 11
+#define SYM_SV 12
+#define SYM_SV_MAC 13
+#define SYS 14
+#define UC 15
 
 
 #include "combos.dtsi"  // requires layer aliases
@@ -453,6 +454,21 @@ ZMK_LAYER(linux_gaming,
     X_LB_SV  &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp RSHFT     &kp Z         &kp X         &kp C         &kp V           X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
     X_LH                                                NAV_BSPC     SK_SHIFT_SYM_SV X_MH     &kp RET       &kp SV_SPACE                                              X_RH
+//╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
+)
+
+
+// Linux colemakish Swedish layout. Set keyboard layout to sv/fi on the host.
+// See corne.keymap and glove80.keymap for key placements, including W.
+ZMK_LAYER(linux,
+//╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
+    X_LT     &kp Q         &kp W         &kp F         &kp P         &kp B           X_MT     &kp J         &kp L         &kp U         &kp Y       &mt SV_O_UMLAUT SV_SQT X_RT
+//├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+    X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G           X_MM     &kp M         &hmr LCTRL N  &hmr RSHFT E  &hmr LALT I   &hmr LGUI O    X_RM_SV 
+//├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+    X_LB_SV  &kp Z         &kp X         &kp C         &kp D         &kp V           X_MB     &kp K         &kp H         &kp COMMA     &kp DOT     &mt SV_BSLH SV_FSLH X_RB
+//├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
+    X_LH                                                NAV_BSPC     SK_SHIFT_SYM_SV X_MH     &lt SYM_SV RET &lt_spc NAV_LH 0                                         X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
 )
 
