@@ -444,15 +444,15 @@ ZMK_LAYER(linux_en,
 )
 
 // Linux left handed gaming layout (asdw). Set keyboard layout to sv/fi on the host.
-ZMK_LAYER(linux_gamingp,
+ZMK_LAYER(linux_gaming,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp Q       &kp SV_A_UMLAUT &kp E         &kp R         &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O       &mt SV_A_RING SV_SQT X_RT
+    X_LT     &kp Q         &kp W         &kp E         &kp R         &kp T           X_MT     &kp TAB       &kp Q         &kp W         &kp E         &kp R           X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G           X_MM     &kp H         &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI P     X_RM_SV 
+    X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G           X_MM     &kp CAPS      &kp A         &kp S         &kp D         &kp F           X_RM 
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB_SV  &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT     &mt SV_BSLH SV_FSLH X_RB
+    X_LB_SV  &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp RSHFT     &kp Z         &kp X         &kp C         &kp V           X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
-    X_LH                                                NAV_BSPC     SK_SHIFT_SYM_SV X_MH     &lt SYM_SV RET &lt_spc NAV_LH 0                                         X_RH
+    X_LH                                                NAV_BSPC     SK_SHIFT_SYM_SV X_MH     &kp RET       &kp SV_SPACE                                              X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
 )
 
