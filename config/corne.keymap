@@ -12,6 +12,7 @@
 #define X_RM    &none            // middle row, right
 #define X_RM_SV_MAC &mac_sv_oe   // macos swedish layer, middle row right
 #define X_RM_SV &kp SV_O_UMLAUT  // swedish layer, middle row right
+#define X_RM_SV_C &kp SV_A_UMLAUT  // swedish colemak layer, middle row right
 #define X_RB    &smart_shft      // bottom row, right
 #define X_RH    SK_SHIFT_FN      // thumb row, right
 
