@@ -18,6 +18,9 @@
 #define X_MB    SMART_NUM &none &none       &none &none SK_SHIFT_FN
 #define X_RB    &smart_shft
 
+// Gaming layer, thumbs for right hand
+#define X_MB_GA    SMART_NUM &none &none       &tl FUN &kp RCTRL &kp RSHFT
+
 #define X_LH    &none &none &none &kp LEFT &kp RIGHT
 #define X_MH    &none &none
 #define X_RH    &kp UP &kp DOWN &none &none &none
