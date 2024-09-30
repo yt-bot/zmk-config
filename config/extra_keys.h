@@ -25,6 +25,16 @@
     #define X_LH_SV
 #endif
 
+#if !defined X_LM_SV_C  // thumb row, left
+    #define X_LM_SV_C
+#endif
+#if !defined X_LB_SV_C  // bottom row, left
+    #define X_LB_SV_C
+#endif
+#if !defined X_LH_SV_C  // thumb row, left
+    #define X_LH_SV_C
+#endif
+
 /* between left and right half */
 #if !defined X_MT  // top row, middle
     #define X_MT
@@ -65,6 +75,11 @@
 
 #if !defined X_RM_SV  // middle row, right
     #define X_RM_SV
+#endif
+
+
+#if !defined X_RM_SV_C  // middle row, right
+    #define X_RM_SV_C
 #endif
 
 #if !defined X_RM_SV_MAC  // middle row, right
