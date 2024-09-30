@@ -20,16 +20,17 @@
 #define EN_MAC 1
 #define SV 2
 #define DEF 3
-#define NAV_LH 4
-#define NAV_MAC_LH 5
-#define FN 6
-#define NUM 7
-#define NUM_MAC 8
-#define SYM 9
-#define SYM_SV 10
-#define SYM_SV_MAC 11
-#define SYS 12
-#define UC 13
+#define 5V_GAME 4
+#define NAV_LH 5
+#define NAV_MAC_LH 6
+#define FN 7
+#define NUM 8
+#define NUM_MAC 9
+#define SYM 10
+#define SYM_SV 11
+#define SYM_SV_MAC 12
+#define SYS 13
+#define UC 14
 
 
 #include "combos.dtsi"  // requires layer aliases
@@ -425,7 +426,7 @@ ZMK_LAYER(linux,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB_SV  &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT     &mt SV_BSLH SV_FSLH X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
-    X_LH                                                NAV_BSPC     SK_SHIFT_SYM_SV X_MH     &lt SYM_SV RET &lt_spc NAV_LH 0                                            X_RH
+    X_LH                                                NAV_BSPC     SK_SHIFT_SYM_SV X_MH     &lt SYM_SV RET &lt_spc NAV_LH 0                                         X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
 )
 
@@ -439,6 +440,19 @@ ZMK_LAYER(linux_en,
     X_LB     &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT       &mt BSLH FSLH   X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
     X_LH                                               NAV_BSPC     SK_SHIFT_SYM     X_MH     &lt SYM RET   &lt_spc NAV_LH 0                                          X_RH
+//╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
+)
+
+// Linux left handed gaming layout (asdw). Set keyboard layout to sv/fi on the host.
+ZMK_LAYER(linux_gamingp,
+//╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
+    X_LT     &kp Q       &kp SV_A_UMLAUT &kp E         &kp R         &kp T           X_MT     &kp Y         &kp U         &kp I         &kp O       &mt SV_A_RING SV_SQT X_RT
+//├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+    X_LM     &hml LGUI A   &hml LALT S   &hml LSHFT D  &hml LCTRL F  &kp G           X_MM     &kp H         &hmr LCTRL J  &hmr RSHFT K  &hmr LALT L   &hmr LGUI P     X_RM_SV 
+//├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+    X_LB_SV  &kp Z         &kp X         &kp C         &kp V         &kp B           X_MB     &kp N         &kp M         &kp COMMA     &kp DOT     &mt SV_BSLH SV_FSLH X_RB
+//├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴─────────────|─────────────╯ ├──────┤
+    X_LH                                                NAV_BSPC     SK_SHIFT_SYM_SV X_MH     &lt SYM_SV RET &lt_spc NAV_LH 0                                         X_RH
 //╰──────╯                              ╰────────────┴─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────┴─────────────╯                             ╰──────╯
 )
 
@@ -472,7 +486,7 @@ ZMK_LAYER(fn,
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &kp C_MUTE    &kp ESC       VOL_DOWN      DSK_NEXT      ___             X_MM     ___           &hml RCTRL F4 &hml RSHIFT F5 &hml RALT F6 &hml RGUI F11   X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB     &to SV_MAC    &to EN_MAC    &to DEF       &to SV        ___             X_MB     ___           &kp F1        &kp F2        &kp F3        &kp F10         X_RB
+    X_LB     &to SV_MAC    &to EN_MAC    &to DEF       &to SV        &to 5V_GAME     X_MB     ___           &kp F1        &kp F2        &kp F3        &kp F10         X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├──────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
     X_LH                                               ___           ___             X_MH     ___           ___                                                       X_RH
 //╰──────╯                                           ╰─────────────┴─────────────╯ ╰──────╯ ╰─────────────┴─────────────╯                                           ╰──────╯
