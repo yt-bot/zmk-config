@@ -22,7 +22,7 @@
 #define DEF 3
 #define SV_GAME 4
 #define SV_COLE 5
-#define 6
+#define NAV_LH 6
 #define NAV_MAC_LH 7
 #define FN 8
 #define NUM 9
